@@ -1,0 +1,481 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #182C61;
+    margin: 0 auto;
+    font-family: 'B612 Mono', monospace;
+    overflow-x: hidden;
+}
+img{
+    height: auto;
+    display: block;
+    width: 50vw;
+}
+
+.nav{
+    
+    background-color: #95afc0;
+    position: relative;   
+}
+.nav h1 a{
+    color: #182C61;
+    text-decoration: none; 
+}
+.forth-1 img{
+    width: 90%;
+}
+.nav h1{
+    font-weight: 550;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 2.5rem;
+    margin: 2rem ;
+    display: inline-block;
+    margin-bottom: 4rem;
+}
+.nav h1 a:hover{
+    color: white;
+}
+
+.nav-bar ul{
+    width: 100%;
+    height: 85vh;
+    margin-top: -2em;
+    padding: 0.2em;
+    list-style: none;
+    line-height: 3em;
+    display: grid;
+    place-items: center;
+    transform: scale(1,0);
+    transition: transform 0.3s ease-in;
+    transform-origin: top;
+    opacity: 1;
+    background: linear-gradient(to right bottom,#182c61,#476cd1);
+    
+}
+.nav-bar ul li{
+    box-shadow:1px 1px #476cd1 ;
+    padding: 0.2em;
+    width: 25%;
+    text-align: center;
+    transform: scale(0,0);
+    font-family: 'Baskervville', serif;  
+    
+    
+}
+.nav-bar ul li a{
+    color: white;
+    font-size: 1.25em;
+    text-decoration: none; 
+    
+}
+.nav-toggle{
+    position: absolute;
+    transform: scale(2);
+    top: 1.5rem;
+    right:1rem;
+    cursor: pointer; 
+    opacity: 0; 
+    z-index: 2;
+}
+.re{
+    background: #182C61;
+    position: absolute;
+    width: 4vw;
+    height: 0.25%;                
+    top: 2rem;
+    right: 1rem;
+    
+    
+}
+.re::before,.re::after{
+    content: '';
+    position: absolute;
+    background: #182C61;
+    width: 100%;
+    height: 100%;
+    
+}
+.re::before{
+    top: 6px;
+}
+.re::after{
+    bottom: 6px;
+}
+.nav-toggle:checked ~ .nav-bar ul{
+   
+    opacity: 1;
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~.container{
+    transform: translateY(0%);
+}
+
+.nav-toggle:checked ~ .nav-bar ul li{
+    transform: scale(1,1);
+    transition: transform 0.2s ease-in 0.25s;
+}
+.nav-bar ul li:hover{
+    border-radius: 7%;
+    box-shadow: 1px 1px white;
+    background-color: #2C3A47;
+}
+.nav-bar ul li a:hover {
+    color: #1B9CFC;
+}
+.container{
+    height: 100vh;
+    transform: translateY(-88%);
+    transition: transform 0.3s ease-out 0.15s;
+}
+.first{
+    color: white;
+    margin-top: -1rem;
+    height: 120vh;
+    background-image: linear-gradient(to left,#007D58,#182C61);
+    background-size: 400%;
+    animation: bg-animation 15s infinite alternate;
+    margin-bottom: 0rem;
+    padding-bottom: 4rem;
+    
+}
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+p{
+    line-height: 2em;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+.first-1{
+    
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.first-1 h2{
+    font-size: 3em;
+    justify-self: start;
+    padding: 2rem;
+
+}
+
+.first-1 p a{
+    
+    text-decoration: none;
+    color: #00ffff;
+    position: relative;
+    font-size: 1.3em;
+    letter-spacing: .2rem;
+    
+}
+.first-1 p a:hover{
+    transform: scale(1.5);
+    
+}
+.first-1 p a::before{
+    content:'';
+    position: absolute;
+    background: whitesmoke;
+    height: 10%;
+    width: 10%;
+    top: 11.5px;
+    left: -65px;
+    transition: ease-in 0.3s ;
+    transform-origin: right;
+}
+.first-1 p a:hover::before{
+    transform-origin: left;
+    width: 20%;
+}
+.second{
+    height: auto;
+    background:#e6e6e6;
+    padding: 2.5rem ;
+    margin-bottom: 0em;   
+}
+.second h4{
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+.second p{
+    font-size: 1.4em;
+}
+.third{
+    display: grid;
+    
+}
+.third-1{
+    
+    background-color: #182C61;
+}
+.third-1 img{
+    padding-top: 0rem;
+    margin-right: 0em;
+    margin-left: 3rem;
+    display: block;
+    width: 90%;
+    
+}
+.third-2{
+    
+    padding: 3rem 2rem 2rem 5rem ;
+    background-color: #182C61;
+    color: white;
+    z-index: 1;
+}
+.third-2 h2{
+    font-size: 2rem;
+}
+.third-2 p{
+    padding-top: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.third-2 p a{
+    text-decoration: none;
+    color: #00ffff;
+    position: relative;
+    font-size: 1.3em;
+    letter-spacing: .2rem;
+    
+}
+.third-2 p a:hover{
+    transform: scale(1.5);
+}
+.third-2 p a::before{
+    content:'';
+    position: absolute;
+    background: whitesmoke;
+    height: 10%;
+    width: 10%;
+    top: 14.5px;
+    left: -55px;
+    transition: ease-in 0.3s ;
+    transform-origin: right;
+}
+.third-2 p a:hover::before{
+    transform-origin: left;
+    width: 25%;
+}
+.forth{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.forth-1 img{
+    display: block;
+    height: auto;
+    width: 90vh;
+    margin: 2rem 2.5rem 2rem 0rem
+}
+.forth-2{
+    color:#595959;
+    padding: 2rem;
+}
+.forth-2 h2{
+    padding-left: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 200;
+
+}
+.forth-2 p{
+    font-size: 1.1rem;
+}
+.forth-2 p a{
+    padding-left: 2rem;
+    text-decoration: none;
+    color:#00ffff;
+    position: relative;
+    font-size: 1.3em;
+    letter-spacing: .2rem;
+    
+}
+.forth-2 p a:hover{
+    transform: scale(1.5);
+}
+.forth-2 p a::before{
+    content:'';
+    position: absolute;
+    background-color: #182C61;
+    height: 10%;
+    width: 10%;
+    top: 12.5px;
+    left: -25px;
+    transition: ease-in 0.3s ;
+    transform-origin: right;
+}
+.forth-2 p a:hover::before{
+    transform-origin: left;
+    width: 25%;
+}
+.fifth{
+    padding: 2rem 3rem 1rem 3rem;
+    background: linear-gradient(to bottom,#999999,white);
+    display: grid;
+    height: 100vh;
+}
+.fifth-1 h2{
+    padding-left: .5rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.fifth-1 p{
+    padding-top:2rem;
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+}
+.fifth-2 .btn a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 4rem 1rem 4rem;
+    background-color: #182C61;
+    position: relative;
+    letter-spacing: .1rem;
+    outline: 3px solid white;
+    
+    
+}
+
+.fifth-2 .btn a:hover{
+    outline: 3px solid white;
+    outline-offset: -5px;
+    transition: 0.3s ease-in;
+}
+.fifth-2 .btn a::before{
+    content:'';
+    position: absolute;
+    background-color: #808080;
+    height: 4%;
+    width: 10%;
+    top: 20.5px;
+    left: -55px;
+    transition: ease-in 0.3s ;
+    transform-origin: right;
+}
+.fifth-2 .btn a:hover::before{
+    transform-origin: left;
+    width: 25%;
+}
+@media (min-width:1000px){
+    .re{
+        display: none;
+    }
+    .nav-bar ul{
+        all:unset;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        width: 50%;
+        height: 2.3%;
+        top: 1rem;
+        left: 30rem;  
+    }
+    .nav-bar ul li{
+        all: unset;
+        width: 100%;
+        font-family: 'Baskervville', serif;  
+    }
+    .nav-bar ul li a{
+        color: white;
+        position: relative;
+        top: 25px;
+        left: 35px;
+
+    }
+    .container{
+        all: unset;
+    }
+    .first{
+        padding-top: 8em;
+    }
+    .first-1 h2{
+        padding-left: 5rem;
+        max-width: 30ch;
+    }
+    .second{
+        padding-left: 5rem;
+        padding-right:7rem;
+    }
+    .first-1 p{
+        justify-self: start;
+        padding-left: 8em;
+    }
+    .third{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .third-1 img{
+        padding-right: -1rem;
+        margin-top: -2rem;
+
+    }
+    .third-2 h2{
+        color: gray;
+        font-weight: 550;
+        font-size: 2.5rem;
+    }
+    .third-2{
+        padding-right: 7rem;
+    }
+    .third-2 p{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .forth{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .forth-1 img{
+        padding-top: 3rem;
+        padding-left: 2rem;
+    }
+    .forth-1 img{
+        width: 90%;
+    }
+    
+    .forth-2{
+        
+        padding-left: 0rem;
+        padding-right:6rem;
+    }
+    .forth-2 p{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    img{
+        width: 100%;
+        height: 90vh;
+    }
+    img:hover{
+        cursor: pointer;
+        filter: grayscale(0.5);
+    }
+    .fifth-2 .btn{
+        text-align: center;
+    }
+    
+    
+    
+    
+        
+
+    
+    
+}
